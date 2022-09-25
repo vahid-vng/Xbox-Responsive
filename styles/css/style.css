@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: rgb(100, 93, 106);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  background: #4fefbf;
+}
+.header h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(100, 93, 106);
+}
+.header .burger-menu {
+  display: none;
+  flex-direction: column;
+}
+.header .burger-menu span {
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  margin: 2px;
+  border-radius: 3px;
+  background-color: rgb(100, 93, 106);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar img {
+  width: 60px;
+  border-radius: 20%;
+}
+.navbar nav {
+  margin-right: 40px;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar a {
+  padding: 8px;
+  text-decoration: none;
+  transition: all 0.15s ease-in;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(100, 93, 106);
+}
+.navbar a:hover {
+  color: rgb(27, 27, 27);
+}
+
+.main {
+  display: flex;
+  margin: 2rem 3rem;
+}
+.main aside {
+  flex-direction: column;
+  width: 25%;
+  margin-right: 25px;
+  box-shadow: 0 4px 4px 0 silver;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main aside div {
+  background-color: #4fefbf;
+  width: 100%;
+  height: 110px;
+  margin: 20px 1px;
+  line-height: 110px;
+  text-align: center;
+  box-shadow: 0 4px 4px 0 silver;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(100, 93, 106);
+}
+.main main {
+  width: 75%;
+  flex-direction: column;
+  background-color: #fff;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 silver;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main main img {
+  width: 400px;
+}
+.main main h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #4fefbf;
+  margin: 2rem 0 3rem;
+}
+.main main p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(27, 27, 27);
+}
+
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 silver;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+}
+.card .card-content {
+  line-height: 1.5rem;
+  padding: 15px;
+  background-color: #fff;
+}
+.card .card-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: rgb(27, 27, 27);
+}
+.card .card-content span {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4fefbf;
+}
+
+footer {
+  display: flex;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  background-color: #4fefbf;
+}
+footer .summary {
+  width: 50%;
+}
+footer .summary p {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: rgb(100, 93, 106);
+}
+footer .links {
+  padding: 0 5rem;
+}
+footer .links ul {
+  list-style-type: none;
+}
+footer .links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(100, 93, 106);
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: all 0.15s ease-in;
+}
+footer .links a:hover {
+  color: rgb(27, 27, 27);
+}
+
+@media (max-width: 768px) {
+  .header .burger-menu {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+  .main {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+  .main main {
+    width: calc(100% - 2rem);
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  .main main p {
+    font-size: 1.3rem;
+  }
+  .main aside {
+    width: calc(100% - 2rem);
+    height: 600px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .summary {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .links {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 833px) {
+  .main main h2 {
+    font-size: 2.5rem;
+  }
+  .main main p {
+    font-size: 1.5rem;
+  }
+  aside .course p {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
